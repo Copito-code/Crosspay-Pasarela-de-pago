@@ -1,0 +1,38 @@
+# ------------------------------------
+# Archivos y Carpetas de Python/Django
+# ------------------------------------
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Archivos de caché
+__pycache__/
+*.py[co]
+
+# Archivos de base de datos local
+db.sqlite3
+
+# Archivos estáticos generados por Django (collectstatic)
+staticfiles/
+
+# Logs y Media
+*.log
+media/
+
+# ------------------------------------
+# Seguridad y Configuraciones Locales
+# ------------------------------------
+
+# Archivo de variables de entorno (¡CRUCIAL para la seguridad!)
+.env
+
+# Claves de desarrollo y secretos de configuración (puede que existan)
+local_settings.py
+
+# Archivos del sistema operativo (macOS)
+.DS_Store
+
+# Archivos de IDE (ej. Visual Studio Code)
+.vscode/

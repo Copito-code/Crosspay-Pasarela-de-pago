@@ -1,0 +1,83 @@
+/* frontend-react/src/components/Listado.module.css */
+
+.adminPanelContainer {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.title {
+    color: var(--bg-sec); /* Heredado de index.css */
+}
+
+/* Modifica el botón de Logout para usar los estilos globales de 'button' 
+   y solo sobreescribir los específicos. */
+.logoutButton {
+    /* Los estilos base (gradiente, cursor, transition) vienen de index.css */
+    background: linear-gradient(315deg, #3c36ff, #fe37a7);
+    color: white; 
+    padding: 10px 15px; 
+    border: none; 
+    border-radius: 4px; 
+    /* El hover (scale) sigue aplicando desde index.css */
+}
+
+.emptyMessage {
+    color: var(--pg); /* Heredado de index.css */
+}
+
+/* --- Estilos de la Tabla (Table) --- */
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--bg-sec); /* Heredado de index.css */
+    box-shadow: 0 2px 8px var(--shadow); /* Heredado de index.css */
+}
+
+.table thead tr {
+    background-color: var(--line); /* Heredado de index.css */
+}
+
+/* Estilo para todas las celdas (th y td) */
+.table th, 
+.table td {
+    padding: 10px;
+    text-align: left;
+}
+
+.table th {
+    color: var(--titles); /* Heredado de index.css */
+}
+
+.table tbody tr {
+    border-bottom: 1px solid var(--line); /* Heredado de index.css */
+}
+
+.table td {
+    color: var(--pg); /* Color de texto base para datos */
+}
+
+/* Celda de Monto específica */
+.table td.amount {
+    color: var(--titles); /* Color más prominente */
+    font-weight: bold;
+}
+
+/* Estilos para mensajes de estado */
+.loadingMessage {
+    text-align: center;
+    color: var(--titles);
+}
+
+.errorMessage {
+    text-align: center;
+    color: var(--accent2);
+}

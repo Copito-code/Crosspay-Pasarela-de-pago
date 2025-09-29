@@ -1,0 +1,91 @@
+
+/* Importar la fuente 'DM Sans' */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+/* Reglas CSS para <body> */
+body {
+    font-family: 'DM Sans', sans-serif;
+    user-select: none;
+    background-color: var(--bg-ppal); 
+    background-image: url("assets/Panal-brillante.png");
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+
+/* Overlay con degradado diagonal */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg, 
+        rgba(0, 0, 0, 0.842) 0%, 
+        rgba(0, 0, 0, 0.3) 100%
+    );
+    pointer-events: none; /* Permite interactuar con elementos debajo */
+    z-index: 1;
+}
+
+/* Asegurar que el contenido esté por encima del overlay */
+body > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Estilos globales light mode (Variables) */
+:root {
+    --alpha: transparent;
+    --bg-ppal: #0f0f0f;
+    --bg-sec: #FFFFFF;
+    --accent1: #5036f6;
+    --accent2: #e937b1;
+    --accent3: #7B3AEC;
+    --titles: #1E1A30;
+    --pg: #5E5E5E;
+    --icons: #999999;
+    --shadow: rgba(30, 26, 48, 0.1);
+    --line: #bdbdbd;
+}
+
+/* --- Estilos Adicionales para los Inputs --- */
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box; 
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    font-size: 16px;
+    color: var(--titles);
+    background-color: var(--bg-sec);
+}
+/* Asegura que el foco se vea profesional */
+input:focus, select:focus {
+    border-color: var(--accent3);
+    outline: none;
+    box-shadow: 0 0 0 1px var(--accent3);
+}
+
+/* Estilos para el boton */
+button {
+    background: linear-gradient(315deg, #3c36ff, #fe37a7);
+    cursor: pointer;
+    /* 1. Añade 'transform' a la transición para que se anime el escalado. 
+       Mantén 'background-color' por si luego lo necesitas, o cámbialo a 'all' */
+    transition: transform 0.3s ease-in-out, background-color 0.3s;
+    /* Asegura que el elemento pueda ser escalado (Aunque 'transform' suele hacerlo por defecto, 
+       es bueno para consistencia) */
+}
+
+button:hover:not(:disabled) {
+    /* 2. Aplica un ligero escalado (por ejemplo, 1.05 para un 5% más grande) */
+    transform: scale(1.05); 
+}

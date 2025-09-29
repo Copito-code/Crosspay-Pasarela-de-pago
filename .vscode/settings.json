@@ -1,0 +1,6 @@
+{
+    "python-envs.defaultEnvManager": "ms-python.python:system",
+    "python-envs.pythonProjects": [],
+    // AÑADE ESTO: (Asegúrate de que la ruta sea EXACTA a tu sistema)
+    "python.defaultInterpreterPath": "C:\\Users\\PC\\Documents\\pasarela_de_pago_fullStack\\backend-django\\venv\\Scripts\\python.exe" 
+}
