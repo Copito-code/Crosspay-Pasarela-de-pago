@@ -32,6 +32,8 @@ El principal problema encontrado fue el **error de CORS** persistente en la conf
 
 **Para garantizar una revisión fluida y funcional:** El proyecto está configurado para ejecutarse 100% en local, asegurando que el Backend (`http://localhost:8000`) y el Frontend (`http://localhost:5173`) se comuniquen sin problemas de seguridad.
 
+Con mas tiempo de ejecucciòn prodria resolver el problema antes mencionado para esta prueba tecnica u optado por empezar de 0 solo con React js. 
+
 ---
 
 ## 🛠️ Stack Tecnológico
